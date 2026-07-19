@@ -1,0 +1,51 @@
+Microsoft Windows [Version 10.0.26220.8544]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\reddy>cd C:\Projects\EcommerceMinorProject
+
+C:\Projects\EcommerceMinorProject>venv\Scripts\activate
+
+(venv) C:\Projects\EcommerceMinorProject>python ecommerce_analysis_example.py
+Rows, Columns: (9005, 10)
+
+Columns: ['OrderID', 'OrderDate', 'CustomerID', 'ProductID', 'ProductName', 'Category', 'UnitPrice', 'Quantity', 'Country', 'LineAmount']
+
+Monthly revenue head:
+   YearMonth  LineAmount
+0   2025-01  6757502.31
+1   2025-02  4742356.77
+2   2025-03  8486130.70
+3   2025-04  6778442.46
+4   2025-05  6068793.27
+
+Top 10 products by revenue:
+    ProductID        ProductName   LineAmount
+1       P002             Laptop  39828082.53
+0       P001         Smartphone  12264160.18
+4       P005         Smartwatch   4829529.71
+15      P016      Mixer Grinder   2509538.46
+3       P004  Bluetooth Speaker   2438068.16
+8       P009             Jacket   2212077.32
+2       P003         Headphones   2018895.85
+17      P018         Dinner Set   2016544.88
+7       P008           Sneakers   1802852.52
+16      P017    Pressure Cooker   1656038.79
+C:\Projects\EcommerceMinorProject\venv\Lib\site-packages\mlxtend\frequent_patterns\fpcommon.py:175: DeprecationWarning: DataFrames with non-bool types result in worse computationalperformance and their support might be discontinued in the future.Please use a DataFrame with bool type
+  warnings.warn(
+
+Frequent itemsets:
+     support                        itemsets
+0  0.125667   frozenset({Badminton Racket})
+1  0.123333           frozenset({Bedsheet})
+2  0.112000  frozenset({Bluetooth Speaker})
+3  0.118000     frozenset({Cooking Oil 1L})
+4  0.128667        frozenset({Cricket Bat})
+
+Top 10 rules:
+                     antecedents                   consequents   support  confidence     lift
+0         frozenset({Tea 500g})  frozenset({Wheat Flour 5kg})  0.020333    0.156812  1.19098
+1  frozenset({Wheat Flour 5kg})         frozenset({Tea 500g})  0.020333    0.154430  1.19098
+
+Files saved: monthly_revenue.csv, product_revenue.csv, association_rules.csv
+
+(venv) C:\Projects\EcommerceMinorProject>
